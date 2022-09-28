@@ -24,4 +24,5 @@ def GetInfo(SESSDATA):
         '剩余资格天数': info_loads['data']['restDays'],
         '裁决准确率': str(info_loads['data']['rightRadio'])+'%'
     })
+    print(info_loads)
     return info_loads,parsed
