@@ -12,6 +12,7 @@ def GetInfo(SESSDATA):
     }
     info=r.get(url,headers=headers)
     info_loads=js.loads(info.text)
+    print(info_loads)
     status={
         1: '具有资格',
         2: '资格失效'
@@ -24,5 +25,4 @@ def GetInfo(SESSDATA):
         '剩余资格天数': info_loads['data']['restDays'],
         '裁决准确率': str(info_loads['data']['rightRadio'])+'%'
     })
-    print(info_loads)
     return info_loads,parsed
