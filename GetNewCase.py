@@ -13,7 +13,6 @@ def GetNew(csrf,sessdata):
         'csrf': csrf
     }
     data=r.post(url,headers=headers,params=params)
-    # print(data)
     dataloads=js.loads(data.text)
     # print(dataloads)
     if(dataloads['code']==25014 or dataloads['code']==25008): return True
